@@ -1,0 +1,14 @@
+{
+  "host": "0.0.0.0",
+  "port": 8080,
+  "username": "admin",
+  "password_hash": "REPLACE_WITH_A_WERKZEUG_PASSWORD_HASH",
+  "secret_key": "REPLACE_WITH_A_RANDOM_64_CHARACTER_SECRET",
+  "session_hours": 12,
+  "cloud": {
+    "enabled": false,
+    "ingest_url": "https://YOUR_DOMAIN/api/ingest",
+    "token": "REPLACE_WITH_THE_SAME_RANDOM_TOKEN_AS_CLOUD_CONFIG",
+    "upload_seconds": 1
+  }
+}

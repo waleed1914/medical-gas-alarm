@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Medical Gas Alarm</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-lines"><span></span><h1>MEDICAL GAS ALARM</h1><span></span></div>
+    <div class="toolbar">
+      <span id="connectionSummary" class="connection-summary">CONNECTING…</span>
+      <form method="post" action="{{ url_for('logout') }}"><button class="logout">LOG OUT</button></form>
+    </div>
+  </header>
+  <main>
+    <div id="emptyState" class="empty-state">WAITING FOR CONNECTED PANELS…</div>
+    <section id="panelGrid" class="panel-grid" aria-live="polite"></section>
+  </main>
+  <div id="detailModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-shell">
+      <button id="closeDetail" class="close-detail" aria-label="Close">×</button>
+      <h2 id="detailName"></h2>
+      <div id="detailGases" class="detail-gases"></div>
+      <div id="detailFlags" class="detail-flags"></div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

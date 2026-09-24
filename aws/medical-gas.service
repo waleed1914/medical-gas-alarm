@@ -1,0 +1,19 @@
+[Unit]
+Description=Medical Gas Cloud Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=medicalgas
+Group=medicalgas
+WorkingDirectory=/opt/medical-gas
+Environment=CLOUD_COOKIE_SECURE=true
+ExecStart=/opt/medical-gas/venv/bin/gunicorn --workers 2 --threads 4 --bind 127.0.0.1:8000 Medical_Gas_Cloud_Server:app
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

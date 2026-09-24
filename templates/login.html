@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Medical Gas Alarm — Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body class="login-page">
+  <main class="login-box">
+    <div class="brand-lines"><span></span><h1>MEDICAL GAS ALARM</h1><span></span></div>
+    <p class="login-subtitle">REMOTE MONITORING</p>
+    <form method="post" class="login-form">
+      <label>USERNAME<input name="username" autocomplete="username" required autofocus></label>
+      <label>PASSWORD<input name="password" type="password" autocomplete="current-password" required></label>
+      {% if error %}<p class="login-error">{{ error }}</p>{% endif %}
+      <button type="submit">SIGN IN</button>
+    </form>
+    <p class="readonly-note">READ-ONLY DASHBOARD</p>
+  </main>
+</body>
+</html>

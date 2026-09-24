@@ -1,0 +1,8 @@
+{
+  "username": "admin",
+  "password_hash": "REPLACE_WITH_A_WERKZEUG_PASSWORD_HASH",
+  "secret_key": "REPLACE_WITH_A_RANDOM_64_CHARACTER_SECRET",
+  "ingest_token": "REPLACE_WITH_THE_SAME_RANDOM_TOKEN_AS_WEB_CONFIG",
+  "offline_seconds": 8,
+  "session_hours": 12
+}

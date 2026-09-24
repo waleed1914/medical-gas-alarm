@@ -1,0 +1,13 @@
+# Generated Python files
+__pycache__/
+*.py[cod]
+
+# Machine-specific files containing live login/session/ingest secrets
+web_config.json
+cloud_config.json
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
