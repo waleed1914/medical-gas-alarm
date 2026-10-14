@@ -18,6 +18,15 @@ Complete medical-gas monitoring project for up to 20 Ethernet panels and 60 sens
 
 The live `web_config.json` and `cloud_config.json` files are intentionally excluded from Git because they contain private tokens and session secrets. Copy their `.example.json` versions, remove `.example` from the filenames, and replace each placeholder. The ingest token must match in both files.
 
+For an automatic secure setup after cloning, install the web requirements and run:
+
+```powershell
+python -m pip install -r requirements-web.txt
+python setup_configs.py
+```
+
+The setup utility asks for the dashboard login and generates matching private cloud credentials. The resulting secret files remain outside Git.
+
 Generate a password hash and random secrets with:
 
 ```powershell
